@@ -1,0 +1,26 @@
+
+1.Create an index on the user_id field in the sales collection to improve the performance of your queries.
+-->db.sales.createIndex({user_id:1});
+
+2.Use the $lookup operator in an aggregation pipeline to join the vendors and sales collections, and return a new documents that contains the name and city of each vendor, along with their sales. The output should look like this:
+-->db.vendors.aggregate([
+  {$lookup: {
+    from: "sales",
+      localField: "_id",
+      foreignField: "user_id",
+      as: "sales"
+    }
+  },
+  {
+    $project: {
+      _id: 1,
+      name: 1,
+      city: 1,
+      sales: {
+        _id: 1,
+        item: 1,
+        profit: 1
+      }
+    }
+  }
+]);
