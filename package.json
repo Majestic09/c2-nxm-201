@@ -22,12 +22,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Majestic09/c2-nxm-201.git"
-},
-"author": "",
-   "license": "ISC",
-     "bugs": {
-         "url": "https://github.com/Majestic09/c2-nxm-201/issues"
-   },
-     "homepage": "https://github.com/Majestic09/c2-nxm-201#readme"
+}
+
 }
 
